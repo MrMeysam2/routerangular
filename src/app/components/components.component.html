@@ -1,7 +1,8 @@
-<h1>sss</h1>
+<h1>Components Page</h1>
 <div class="sidebar">
-  <a class="active" href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">Abo ut</a>
+  <a *ngFor="let link of links" [routerLink]="link.route">{{ link.label }}</a>
+</div>
+
+<div class="content">
+  <router-outlet></router-outlet>
 </div>
